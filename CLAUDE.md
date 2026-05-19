@@ -23,8 +23,7 @@ This is a **TurboModule** (not a Fabric component). Codegen spec is in `src/Nati
 
 `src/index.tsx` re-exports from `src/LocalNetworkPermission`, which resolves per-platform:
 - `.ios.ts` — calls the native module via TurboModuleRegistry
-- `.android.ts` — stub returning `true`
-- `.ts` — default fallback returning `true`
+- `.ts` — default fallback for Android, web, and other non-iOS platforms, returning `true`
 
 ### Native implementation (iOS only)
 
